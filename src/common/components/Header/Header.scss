@@ -1,0 +1,11 @@
+.landing-header {
+    margin-bottom: 24px;
+    font-size: $font-size-24;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-1-33;
+    text-align: center;
+    color: $color-white;
+    @include tablets() {
+        font-size: $font-size-32;
+    }
+}

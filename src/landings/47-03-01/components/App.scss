@@ -1,0 +1,33 @@
+.landing-text {
+    font-size: $font-size-24;
+    line-height: 1.33;
+    text-align: center;
+    color: #7a8f99; 
+    margin: auto;
+    padding-bottom: 25px;
+}
+
+.image-background__hide {
+    display: none;
+    @include tablets() {
+        display: block;
+    }
+}
+
+.landing-form__header {
+    text-align: center;
+    @include tablets() {
+        text-align: left;
+    }
+}
+
+.custom-form {
+    justify-content: center;
+    min-width: 315px;
+    margin-right: 0;
+    @include tablets() {
+        justify-content: normal;
+        margin-right: 50px;
+        min-width: inherit;
+    }
+}

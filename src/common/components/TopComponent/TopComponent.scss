@@ -1,0 +1,23 @@
+.top-component {
+    width: 100%;
+    margin-bottom: 32px;
+    max-height: max-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    &__left-block {
+        margin-bottom: 30px;
+        @include tablets() {
+            margin: 0;
+        }
+    }
+
+    &__right-block {
+
+    }
+
+    @include tablets() {
+        flex-direction: row;
+    }
+}

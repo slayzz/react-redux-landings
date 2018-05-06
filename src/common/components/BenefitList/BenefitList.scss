@@ -1,0 +1,28 @@
+.benefit-list {
+    margin: 0 0 43px 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    width: 100%;
+
+    &__item {
+        padding-bottom: 5px;
+        padding-left: 28px;
+        position: relative;
+        text-align: left;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 0;
+            width: 7px;
+            height: 4px;
+            border-bottom: solid 2px $color-green-3;
+            border-left: solid 2px $color-green-3;
+            transform: rotate(-45deg);
+        }
+    }
+
+}

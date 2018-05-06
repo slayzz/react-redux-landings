@@ -1,0 +1,31 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "plugin:flowtype/recommended"
+    ],
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+      "import/extensions": 0,
+      "import/no-unresolved": {
+          "webpack": {
+            "config": "webpack.common.js"
+          }
+      },
+      "react/jsx-filename-extension": 0,
+      "max-len": ["error", {
+          "code": 120,
+          "tabWidth": 2
+      }],
+      "object-curly-newline": 0,
+      "jsx-a11y/click-events-have-key-events": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
+      "jsx-a11y/label-has-for": 0
+    },
+    "plugins": [
+        "flowtype"
+    ]
+}

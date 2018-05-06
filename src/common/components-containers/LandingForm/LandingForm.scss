@@ -1,0 +1,7 @@
+.landing-form__container {
+    display: flex;
+    flex-direction: column;
+    @include tablets() {
+        width: 470px;
+    }
+}
