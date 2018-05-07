@@ -6,25 +6,25 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
-    padding: 0 10px 70px 10px;
+    padding: 28px 10px 70px 10px;
     max-width: 1182px;
     margin: 0 auto;
 
     @include tablets() {
-        padding: 0 30px 120px 30px;
+        padding: 28px 30px 120px 30px;
     }
 
     @include desktop() {
-        padding: 0 0px 120px 0px;
+        padding: 28px 0px 120px 0px;
     }
 
     &:first-child {
-        padding: 0 10px 70px 10px;
+        padding: 28px 10px 70px 10px;
         @include tablets() {
             padding: 28px 30px 120px 30px;
         }
         @include desktop() {
-            padding: 0 0px 120px 0px;
+            padding: 28px 0px 120px 0px;
         }
     }
 }
