@@ -2,6 +2,7 @@
     display: flex;
     position: relative;
     cursor: pointer;
+    align-items: center;
 
     font-size: $font-size-12;
     line-height: $line-height-1-33;
@@ -10,6 +11,10 @@
     &__text {
         text-align: left;
         margin-left: 10px;
+        padding-bottom: 4px;
+        @include tablets() {
+            padding-bottom: 0;
+        }
     }
 
     &__input {

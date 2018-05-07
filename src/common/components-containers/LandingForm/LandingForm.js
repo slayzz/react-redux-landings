@@ -44,7 +44,7 @@ class LandingForm extends Component {
       <Form className={className} name="47-03-01" validators={validators} pathToStore={['land']}>
         {api => (
           <div className={DEFAULT_CLASS_FORM_NAME}>
-            <Header className="landing-form__header" text="Start trading options right now!" />
+            <Header style={{ marginTop: 0 }} className="landing-form__header" text="Start trading options right now!" />
             <BenefitList
               items={[
                 'Get constant yet affordable results with a low minimum trade amount of just $1',
@@ -85,7 +85,9 @@ class LandingForm extends Component {
               value={api.getValue('agreement')}
               validation={api.getValidation('agreement')}
             >
-              <p>I am of legal age, and I have reviewed and accept the service agreement.</p>
+              <p>
+                I am of legal age, and I have reviewed and accept the service⠀agreement.
+              </p>
             </CheckBoxTooltiped>
             <Button
               onClick={api.submitForm}

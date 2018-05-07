@@ -16,17 +16,17 @@ import './App.scss';
 
 const iconListItems = [
   {
-    headText: 'Maximum fun, minimum risk',
+    headText: 'Maximum fun, minimum risk',
     otherText: 'Sharpen your skills and try new strategies with the 10,000 in your demo account',
     image: 'img/mockups/listImages/head.svg',
   },
   {
-    headText: 'No need for fine-tuning',
+    headText: 'No need for fine‑tuning',
     otherText: 'Use built-in indicators for advanced trading',
     image: 'img/mockups/listImages/indicators.svg',
   },
   {
-    headText: 'Trade whenever and wherever you want',
+    headText: 'Trade whenever and wherever you want',
     otherText: 'Access the platform from any device',
     image: 'img/mockups/listImages/devices.svg',
   },
@@ -84,7 +84,7 @@ class App extends Component {
               style={{
                 position: 'relative',
                 overflow: 'hidden',
-                marginRight: '-100px',
+                marginRight: '-1000px',
                 paddingLeft: '7px',
                 paddingBottom: '10px',
               }}
@@ -123,8 +123,11 @@ class App extends Component {
         </LandingPartWindow>
         <LandingPartWindow wrapperType="footer">
           <Content direction="vertically">
-            <SvgIcons icons={paymentIcons} />
-            <p className="landing-text">Get your earnings conveniently</p>
+            <div style={{ marginBottom: '50px' }}>
+              <SvgIcons icons={paymentIcons} />
+              <p className="landing-text">Get your earnings conveniently</p>
+            </div>
+            <div className="bottom-line" />
             <Header
               style={{ textAlign: 'center', fontSize: '16px', color: '#7a8f99', fontWeight: 'normal' }}
               text="18+"

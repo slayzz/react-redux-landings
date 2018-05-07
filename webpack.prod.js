@@ -5,6 +5,7 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 const extractCss = new ExtractTextPlugin({
   filename: '[name].css',
@@ -42,6 +43,17 @@ const serverConfig = env => ({
               importLoaders: 1,
               localIdentName: '[name]__[local]___[hash:base64:5]',
               sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version'],
+                }),
+              ],
+              sourcemap: true,
             },
           },
           {
@@ -111,6 +123,17 @@ const clientConfig = env => ({
           use: [
             {
               loader: 'css-loader',
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [
+                  autoprefixer({
+                    browsers: ['ie >= 8', 'last 4 version'],
+                  }),
+                ],
+                sourcemap: true,
+              },
             },
             {
               loader: 'sass-loader',

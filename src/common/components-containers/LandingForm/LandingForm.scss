@@ -2,6 +2,6 @@
     display: flex;
     flex-direction: column;
     @include tablets() {
-        width: 470px;
+        width: 440px;
     }
 }

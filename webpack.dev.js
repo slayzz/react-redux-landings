@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = env => ({
   entry: {
@@ -33,6 +34,17 @@ module.exports = env => ({
             loader: 'css-loader',
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['ie >= 8', 'last 4 version'],
+                }),
+              ],
+              sourcemap: true,
+            },
+          },
+          {
             loader: 'sass-loader',
             options: {
               includePath: ['src/styles'],
@@ -50,9 +62,7 @@ module.exports = env => ({
 
       {
         test: /\.css$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { srouceMap: true } }],
+        use: ['style-loader', { loader: 'css-loader', options: { srouceMap: true } }],
       },
     ],
   },

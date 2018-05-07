@@ -8,17 +8,17 @@
 
     &__item {
         padding-bottom: 5px;
-        padding-left: 28px;
+        padding-left: 35px;
         position: relative;
         text-align: left;
 
         &::before {
             content: '';
             position: absolute;
-            top: 6px;
+            top: 5px;
             left: 0;
-            width: 7px;
-            height: 4px;
+            width: 15px;
+            height: 6px;
             border-bottom: solid 2px $color-green-3;
             border-left: solid 2px $color-green-3;
             transform: rotate(-45deg);

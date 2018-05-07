@@ -8,6 +8,11 @@
     background-color: $color-dark-2;
     text-align: left;
 
+    &:not(.input-landing--invalid) > &__input:focus {
+        border: solid 1px $color-green-4;
+        border-radius: 4px;
+    }
+
 
     &__input {
         display: block;
@@ -30,11 +35,6 @@
             transition: background-color 5500s ease-in-out 0s;
             -webkit-text-fill-color: $color-white !important;
             caret-color: $color-white
-        }
-
-        &:focus {
-            border: solid 1px $color-green-4;
-            border-radius: 4px;
         }
 
         &--password {
